@@ -1,10 +1,10 @@
 """Small synthetic physical samples shared by the governance tests."""
 import pytest
 
-from sample_centric_ml.experiments.spec import ExperimentSpec
-from sample_centric_ml.registry.run_registry import create_run_record
-from sample_centric_ml.samples.manifest import DatasetManifest
-from sample_centric_ml.samples.registry import ObservationRecord, SampleRecord
+from sample_aware_mlops.experiments.spec import ExperimentSpec
+from sample_aware_mlops.registry.run_registry import create_run_record
+from sample_aware_mlops.samples.manifest import DatasetManifest
+from sample_aware_mlops.samples.registry import ObservationRecord, SampleRecord
 
 
 @pytest.fixture

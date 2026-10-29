@@ -1,8 +1,8 @@
 """Monitoring operates on explicit physical-sample IDs, without statistical claims."""
 import pytest
 
-from sample_centric_ml.monitoring.drift import ThresholdDriftRule
-from sample_centric_ml.monitoring.signals import confidence_drift, cost_drift, missing_modality_rate
+from sample_aware_mlops.monitoring.drift import ThresholdDriftRule
+from sample_aware_mlops.monitoring.signals import confidence_drift, cost_drift, missing_modality_rate
 
 
 def test_missing_modality_rate_counts_expected_sample_modality_slots():

@@ -73,7 +73,7 @@ unbound boolean pass flag.
 The registry transition API accepts review and deployment records:
 
 ```python
-from sample_centric_ml.lifecycle.states import LifecycleState
+from sample_aware_mlops.lifecycle.states import LifecycleState
 
 registry.transition(
     run_id,

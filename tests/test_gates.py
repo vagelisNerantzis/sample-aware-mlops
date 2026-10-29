@@ -3,14 +3,14 @@ from dataclasses import replace
 
 import pytest
 
-from sample_centric_ml.experiments.identity import build_run_identity
-from sample_centric_ml.gates.base import GateResult, Severity
-from sample_centric_ml.gates.leakage import LeakageGate
-from sample_centric_ml.gates.provenance import ProvenanceGate
-from sample_centric_ml.gates.quality import QualityGate
-from sample_centric_ml.gates.reproducibility import ReproducibilityGate
-from sample_centric_ml.gates.runner import run_gates
-from sample_centric_ml.provenance.record import build_provenance
+from sample_aware_mlops.experiments.identity import build_run_identity
+from sample_aware_mlops.gates.base import GateResult, Severity
+from sample_aware_mlops.gates.leakage import LeakageGate
+from sample_aware_mlops.gates.provenance import ProvenanceGate
+from sample_aware_mlops.gates.quality import QualityGate
+from sample_aware_mlops.gates.reproducibility import ReproducibilityGate
+from sample_aware_mlops.gates.runner import run_gates
+from sample_aware_mlops.provenance.record import build_provenance
 
 
 def test_disjoint_physical_samples_pass_leakage_gate(manifest):

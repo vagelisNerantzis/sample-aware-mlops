@@ -4,19 +4,19 @@ from dataclasses import replace
 
 import pytest
 
-from sample_centric_ml.experiments.identity import build_run_identity
-from sample_centric_ml.gates.base import GateResult, Severity
-from sample_centric_ml.gates.leakage import LeakageGate
-from sample_centric_ml.gates.provenance import ProvenanceGate
-from sample_centric_ml.gates.quality import QualityGate
-from sample_centric_ml.gates.reproducibility import ReproducibilityGate
-from sample_centric_ml.lifecycle.states import LifecycleState, is_allowed_transition
-from sample_centric_ml.monitoring.drift import ThresholdDriftRule
-from sample_centric_ml.monitoring.signals import confidence_drift
-from sample_centric_ml.orchestration.pipeline import run_pipeline
-from sample_centric_ml.provenance.record import ProvenanceRecord
-from sample_centric_ml.registry.artifacts import ArtifactMetadata
-from sample_centric_ml.registry.run_registry import RunRegistry, create_run_record
+from sample_aware_mlops.experiments.identity import build_run_identity
+from sample_aware_mlops.gates.base import GateResult, Severity
+from sample_aware_mlops.gates.leakage import LeakageGate
+from sample_aware_mlops.gates.provenance import ProvenanceGate
+from sample_aware_mlops.gates.quality import QualityGate
+from sample_aware_mlops.gates.reproducibility import ReproducibilityGate
+from sample_aware_mlops.lifecycle.states import LifecycleState, is_allowed_transition
+from sample_aware_mlops.monitoring.drift import ThresholdDriftRule
+from sample_aware_mlops.monitoring.signals import confidence_drift
+from sample_aware_mlops.orchestration.pipeline import run_pipeline
+from sample_aware_mlops.provenance.record import ProvenanceRecord
+from sample_aware_mlops.registry.artifacts import ArtifactMetadata
+from sample_aware_mlops.registry.run_registry import RunRegistry, create_run_record
 
 
 def _initial_gates(record, spec, manifest):

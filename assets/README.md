@@ -1,6 +1,6 @@
 # Architecture figure
 
-`architecture.svg` shows the sample-centric control plane and the conceptual
+`architecture.svg` shows the sample-aware control plane and the conceptual
 roles of the four companion repositories. It uses plain SVG, system fonts,
 and no external images, rendering services, or graph dependencies.
 

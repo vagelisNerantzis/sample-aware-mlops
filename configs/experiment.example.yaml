@@ -1,7 +1,7 @@
 # Illustrative configuration: runtime configuration uses ExperimentSpec.
 # No YAML parser is required or invoked by the package.
 experiment:
-  name: synthetic_sample_centric_v1
+  name: synthetic_sample_aware_v1
   seed: 42
 
 data:

@@ -3,16 +3,16 @@ from dataclasses import replace
 
 import pytest
 
-import sample_centric_ml
-from sample_centric_ml.adapters.interfaces import SampleOutput, StageOutput
-from sample_centric_ml.adapters.synthetic import synthetic_adapters
-from sample_centric_ml.lifecycle.states import LifecycleState
-from sample_centric_ml.orchestration.pipeline import run_pipeline
-from sample_centric_ml.reporting.summary import format_summary
+import sample_aware_mlops
+from sample_aware_mlops.adapters.interfaces import SampleOutput, StageOutput
+from sample_aware_mlops.adapters.synthetic import synthetic_adapters
+from sample_aware_mlops.lifecycle.states import LifecycleState
+from sample_aware_mlops.orchestration.pipeline import run_pipeline
+from sample_aware_mlops.reporting.summary import format_summary
 
 
 def test_public_package_version():
-    assert sample_centric_ml.__version__ == "0.1.0"
+    assert sample_aware_mlops.__version__ == "0.1.0"
 
 
 def test_repeated_synthetic_pipeline_has_identical_identity_and_results(manifest, spec):

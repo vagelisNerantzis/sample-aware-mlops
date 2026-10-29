@@ -1,11 +1,10 @@
-# Sample-Centric ML
+# Sample-Aware MLOps
 
-[![Tests](https://github.com/vagelisNerantzis/sample-centric-ml/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/vagelisNerantzis/sample-centric-ml/actions/workflows/tests.yml)
+[![Tests](https://github.com/vagelisNerantzis/sample-aware-mlops/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/vagelisNerantzis/sample-aware-mlops/actions/workflows/tests.yml)
 
-**An MLOps framework for reproducible, leakage-safe, multimodal scientific machine learning.**
+**An MLOps framework for reproducible, leakage-safe scientific machine learning that preserves physical-sample identity across data lineage, validation, inference, promotion, and monitoring.**
 
-The physical sample is the fundamental unit of the ML lifecycle. Sample-Centric
-ML carries that identity through observation registration, experiment execution,
+The physical sample is the fundamental unit of the ML lifecycle. Sample-Aware MLOps carries that identity through observation registration, experiment execution,
 evaluation, promotion, and monitoring. Version **0.1.0** provides an executable,
 standalone control plane with deterministic synthetic adapters.
 
@@ -25,7 +24,7 @@ transitions directly; the companion projects provide the conceptual ML layers.
 
 ## Architecture
 
-![Sample-centric ML architecture and companion repository roles](assets/architecture.svg)
+![Sample-Aware MLOps architecture and companion repository roles](assets/architecture.svg)
 
 Physical samples -> sample registry -> dataset manifest -> experiment specification
 -> validation gates -> representation / acquisition / inference / evaluation
@@ -101,7 +100,7 @@ Python **3.10 or newer** is required. The runtime uses only the standard library
 
 ```console
 python -m pip install -e ".[dev]"
-python examples/run_sample_centric_mlops.py
+python examples/run_sample_aware_mlops.py
 ```
 
 The demo creates synthetic physical samples and modality observations, builds
@@ -165,9 +164,9 @@ intent. Runtime configuration is typed Python data; YAML parsing is not required
 ```console
 python -m compileall src tests examples assets
 pytest -q
-python examples/run_sample_centric_mlops.py
+python examples/run_sample_aware_mlops.py
 python assets/generate_architecture.py --check
-python -c "import sample_centric_ml; print(sample_centric_ml.__version__)"
+python -c "import sample_aware_mlops; print(sample_aware_mlops.__version__)"
 ```
 
 Tests cover sample / observation uniqueness, deterministic hashing, provenance,
@@ -185,7 +184,7 @@ checks do not establish that GitHub-hosted CI has passed.
 ## Repository structure
 
 ```text
-src/sample_centric_ml/
+src/sample_aware_mlops/
   samples/          Physical samples, observations, immutable manifests
   experiments/      Typed experiment specifications and run identity
   gates/            Leakage, provenance, reproducibility, quality

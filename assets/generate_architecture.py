@@ -35,7 +35,7 @@ def render_svg() -> str:
     """Return byte-stable architecture markup without environment inputs."""
     lines = [
         '<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1340" viewBox="0 0 1280 1340" role="img" aria-labelledby="title description">',
-        '<title id="title">Sample-Centric ML: sample identity across the ML lifecycle</title>',
+        '<title id="title">Sample-Aware MLOps: sample identity across the ML lifecycle</title>',
         '<desc id="description">Physical samples flow through a sample registry, dataset manifest, experiment specification, validation gates, representation, acquisition, inference, evaluation, run registry, promotion, simulation deployment, and monitoring. Monitoring motivates re-evaluation. Four companion repositories are associated with their conceptual execution stages.</desc>',
         '<defs>',
         '<marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#42546a"/></marker>',
@@ -60,7 +60,7 @@ def render_svg() -> str:
         '</style>',
         '</defs>',
         '<rect width="1280" height="1340" fill="#ffffff"/>',
-        _text(55, 49, "Sample-Centric ML", "title"),
+        _text(55, 49, "Sample-Aware MLOps", "title"),
         _text(55, 80, "Physical sample identity survives every stage of the lifecycle.", "subtitle"),
         '<path d="M310 1217 H125 V504 H310" class="loop"/>',
     ]

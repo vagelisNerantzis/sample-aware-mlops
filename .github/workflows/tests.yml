@@ -35,7 +35,7 @@ jobs:
         run: pytest -q
 
       - name: Run synthetic MLOps lifecycle demo
-        run: python examples/run_sample_centric_mlops.py
+        run: python examples/run_sample_aware_mlops.py
 
       - name: Regenerate architecture diagram
         run: python assets/generate_architecture.py
@@ -47,9 +47,9 @@ jobs:
         run: |
           python - <<'PY'
           from importlib.metadata import version
-          import sample_centric_ml
+          import sample_aware_mlops
 
-          assert sample_centric_ml.__version__ == "0.1.0"
-          assert version("sample-centric-ml") == "0.1.0"
-          print("sample-centric-ml 0.1.0 imports successfully")
+          assert sample_aware_mlops.__version__ == "0.1.0"
+          assert version("sample-aware-mlops") == "0.1.0"
+          print("sample-aware-mlops 0.1.0 imports successfully")
           PY

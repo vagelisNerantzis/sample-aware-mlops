@@ -1,6 +1,6 @@
 # Portfolio integration
 
-Sample-Centric ML supplies the orchestration and governance layer. The companion
+Sample-Aware MLOps supplies the orchestration and governance layer. The companion
 repositories describe independently useful scientific components; they are not
 installed as dependencies or imported through local paths.
 
@@ -10,7 +10,7 @@ installed as dependencies or imported through local paths.
 | [adaptive-modality-acquisition](https://github.com/vagelisNerantzis/adaptive-modality-acquisition) | Cost-aware next-modality selection and stopping | Available modalities, sample representation, costs, budget | Sample-linked acquisition decisions and costs | Optional acquisition stage adapter |
 | [multimodal-inference-demo](https://github.com/vagelisNerantzis/multimodal-inference-demo) | Sample-level prediction, uncertainty, reporting | Sample representations / acquired observations | Sample-linked probabilities and inference reports | Inference stage adapter |
 | [scientific-ml-benchmarking](https://github.com/vagelisNerantzis/scientific-ml-benchmarking) | Leakage-safe evaluation, calibration, reproducible benchmarking | Physical sample predictions, labels, explicit membership | Metrics, calibration evidence, evaluation provenance | Evaluation stage adapter and evidence producer |
-| [sample-centric-ml](https://github.com/vagelisNerantzis/sample-centric-ml) | Lineage, deterministic identity, gates, registry, promotion, monitoring | Manifest, experiment specification, code revision, adapter outputs | Governed run records and sample-aware monitoring reports | Standalone control plane |
+| [sample-aware-mlops](https://github.com/vagelisNerantzis/sample-aware-mlops) | Lineage, deterministic identity, gates, registry, promotion, monitoring | Manifest, experiment specification, code revision, adapter outputs | Governed run records and sample-aware monitoring reports | Standalone control plane |
 
 ## Present adapter contract
 

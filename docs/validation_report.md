@@ -1,11 +1,15 @@
-# Validation report
+# Validation report: Sample-Aware MLOps
 
 Validation date: **2026-10-29**. Package version: **0.1.0**.
 
+Project: **Sample-Aware MLOps**. Distribution: `sample-aware-mlops`.
+Import package: `sample_aware_mlops`.
+
 ## Actual environment and installation
 
-- Python **3.11.15**; pytest **9.1.1**.
-- Created an isolated local environment with `python -m venv .venv`, without
+- Python **3.11.15**; pytest **9.2.0**.
+- Recreated the isolated environment at the final repository path with
+  `python -m venv .venv`, without
   system site packages. The application uses only the Python standard library.
 - `python -m pip install -e ".[dev]" --disable-pip-version-check --retries 0
   --timeout 15` passed, exit 0. pytest/build dependencies were installed in that
@@ -14,18 +18,46 @@ Validation date: **2026-10-29**. Package version: **0.1.0**.
   to ignored storage inside this repository. Dependency installation can use a
   package index; application stages, tests and examples make no network calls.
 
+## Rename verification
+
+The existing root directory, source package directory and executable demo were
+renamed in place. The original Git history was retained, including base commit
+`1a1d8ef902f17dc074329e07f1a1617f3dc0e6c9`. No new repository was initialized.
+README, packaging, imports, tests, CI, documentation, configuration, links, badges,
+SVG generator and generated SVG now use the new identity. The public tree still
+contains **57 files**; environment/build/log products are excluded.
+
+The new import and distribution both report 0.1.0. The obsolete import raises
+`ModuleNotFoundError`; the obsolete distribution is absent from the fresh
+environment. Current public file contents and filenames were scanned for obsolete
+product/import/title spellings, including wrapped title variants: **zero matches**.
+Git history is intentionally preserved and is outside that current-tree scan.
+
+Scientific behavior was checked against a pre-rename baseline. With the same
+manifest, fixed experiment name `rename_equivalence_v1` and logical code revision,
+the complete serialized run record, specification, metrics, artifacts and manifest
+are identical. Its run ID remains `run-b5cf27e8d218ace3`. Source/test/example review
+also found no algorithm changes after accounting for import renaming, docstrings
+and the renamed demo experiment label. Existing validation was not weakened.
+
+The demo/config experiment is now named `synthetic_sample_aware_v1`. An experiment
+name is a hashed input, so its config hash and run identity changed as expected.
+The dataset hash, stage-output fingerprint and scientific outputs remain unchanged.
+The actual new values are recorded below; they were not copied from the baseline.
+
 ## Executed checks
 
 | Check | Observed result |
 | --- | --- |
 | `python -m compileall src tests examples assets` | Passed, exit 0 |
 | `pytest -q` | **123 passed, 0 failed, 0 skipped**, no warnings |
-| `python examples/run_sample_centric_mlops.py` | Passed, exit 0; final state MONITORED |
+| `python examples/run_sample_aware_mlops.py` | Passed, exit 0; final state MONITORED |
 | Repeated demo in a fresh process | Identical complete stdout |
 | Standalone negative-check helper | All four required operations blocked |
 | Canonical manifest ordering | Same SHA-256 for reversed samples/modalities/metadata ordering |
 | Deterministic run identity | Same identity for equivalent inputs; seed, revision or sample reassignment changes it |
-| Package/version/import assertion | Project, distribution and import all 0.1.0 |
+| Package/version/import assertion | New project, distribution and import all 0.1.0; obsolete import/distribution absent |
+| Pre/post-rename behavior comparison | Complete fixed-input serialized run record, manifest and spec identical |
 | `python assets/generate_architecture.py` | Passed, exit 0 |
 | `python assets/generate_architecture.py --check` | Passed, exit 0 |
 | SVG exact bytes and XML parsing | Passed |
@@ -71,11 +103,11 @@ The example contains eight artificial physical samples with two observations
 each: four train, two validation, two test. No real sample membership is used.
 Only the validation cohort is passed through the execution/promotion pipeline.
 
-- Run: `run-b58abbd4c93403e7`.
+- Run: `run-61f65ed5ad7b18b8`.
 - Dataset version: `1.0.0`.
 - Dataset hash: `53b10d4dfc29f3386e9662a2c524740ae515184850f0a5d64ebe76ed03992c4d`.
-- Config hash: `f9002ce660d0c0c8f61104da3875d73b676607d52206cd7ae95b494f12c3424a`.
-- Full input fingerprint: `b58abbd4c93403e72c0bcf468f279d966e1eac128e125e957306ffef9b0ad1cc`.
+- Config hash: `ed4b97cb177847d1f9a10b62aaf833551544cc14aa0afc11204fe323623b0bb6`.
+- Full input fingerprint: `61f65ed5ad7b18b8dc0ccf79e8687a302db6c548186df776d4623a5e569a4e8c`.
 - Result fingerprint: `7f6d14f7a29c730379012ce6748e3f23e57def468155ac9a86f65072181941c7`.
 - Passing gates: EvaluationPolicyGate, LeakageGate, ProvenanceGate,
   ReproducibilityGate and QualityGate.
@@ -116,7 +148,7 @@ redaction or authentication system.
 
 ## Diagram and CI
 
-SVG SHA-256: `1d92e2e01bac4f6bd1fe2d9260f48acce6721e89e7e8718d835710b5287ed064`.
+SVG SHA-256: `798f9c32bbe3bf76b01ddb50a5d5d8b74a902f25377e52a67a771f12866b27ee`.
 
 The generator uses only standard-library SVG construction. It renders the same
 bytes repeatedly and matches the version-controlled artifact. `.gitattributes`
@@ -146,7 +178,7 @@ checkpoints or archives are included. Negative fixtures use synthetic values
 only. Private environment/log/build metadata is ignored and not staged.
 
 Data/result/artifact/model ignore rules are root-anchored, preserving source,
-tests and assets. Only this new repository was written. The scientific source
+tests and assets. Only this repository was written and renamed. The scientific source
 project and all four existing portfolio repositories were untouched. No remote
 configuration, push, tag or release is part of this task.
 
@@ -168,44 +200,44 @@ docs/architecture.md
 docs/mlops_lifecycle.md
 docs/portfolio_integration.md
 docs/validation_report.md
-examples/run_sample_centric_mlops.py
+examples/run_sample_aware_mlops.py
 pyproject.toml
-src/sample_centric_ml/__init__.py
-src/sample_centric_ml/adapters/__init__.py
-src/sample_centric_ml/adapters/interfaces.py
-src/sample_centric_ml/adapters/synthetic.py
-src/sample_centric_ml/experiments/__init__.py
-src/sample_centric_ml/experiments/identity.py
-src/sample_centric_ml/experiments/spec.py
-src/sample_centric_ml/gates/__init__.py
-src/sample_centric_ml/gates/base.py
-src/sample_centric_ml/gates/leakage.py
-src/sample_centric_ml/gates/provenance.py
-src/sample_centric_ml/gates/quality.py
-src/sample_centric_ml/gates/reproducibility.py
-src/sample_centric_ml/gates/runner.py
-src/sample_centric_ml/lifecycle/__init__.py
-src/sample_centric_ml/lifecycle/promotion.py
-src/sample_centric_ml/lifecycle/states.py
-src/sample_centric_ml/monitoring/__init__.py
-src/sample_centric_ml/monitoring/drift.py
-src/sample_centric_ml/monitoring/signals.py
-src/sample_centric_ml/orchestration/__init__.py
-src/sample_centric_ml/orchestration/pipeline.py
-src/sample_centric_ml/orchestration/stages.py
-src/sample_centric_ml/provenance/__init__.py
-src/sample_centric_ml/provenance/hashes.py
-src/sample_centric_ml/provenance/record.py
-src/sample_centric_ml/registry/__init__.py
-src/sample_centric_ml/registry/artifacts.py
-src/sample_centric_ml/registry/run_registry.py
-src/sample_centric_ml/reporting/__init__.py
-src/sample_centric_ml/reporting/summary.py
-src/sample_centric_ml/samples/__init__.py
-src/sample_centric_ml/samples/manifest.py
-src/sample_centric_ml/samples/registry.py
-src/sample_centric_ml/validation/__init__.py
-src/sample_centric_ml/validation/inputs.py
+src/sample_aware_mlops/__init__.py
+src/sample_aware_mlops/adapters/__init__.py
+src/sample_aware_mlops/adapters/interfaces.py
+src/sample_aware_mlops/adapters/synthetic.py
+src/sample_aware_mlops/experiments/__init__.py
+src/sample_aware_mlops/experiments/identity.py
+src/sample_aware_mlops/experiments/spec.py
+src/sample_aware_mlops/gates/__init__.py
+src/sample_aware_mlops/gates/base.py
+src/sample_aware_mlops/gates/leakage.py
+src/sample_aware_mlops/gates/provenance.py
+src/sample_aware_mlops/gates/quality.py
+src/sample_aware_mlops/gates/reproducibility.py
+src/sample_aware_mlops/gates/runner.py
+src/sample_aware_mlops/lifecycle/__init__.py
+src/sample_aware_mlops/lifecycle/promotion.py
+src/sample_aware_mlops/lifecycle/states.py
+src/sample_aware_mlops/monitoring/__init__.py
+src/sample_aware_mlops/monitoring/drift.py
+src/sample_aware_mlops/monitoring/signals.py
+src/sample_aware_mlops/orchestration/__init__.py
+src/sample_aware_mlops/orchestration/pipeline.py
+src/sample_aware_mlops/orchestration/stages.py
+src/sample_aware_mlops/provenance/__init__.py
+src/sample_aware_mlops/provenance/hashes.py
+src/sample_aware_mlops/provenance/record.py
+src/sample_aware_mlops/registry/__init__.py
+src/sample_aware_mlops/registry/artifacts.py
+src/sample_aware_mlops/registry/run_registry.py
+src/sample_aware_mlops/reporting/__init__.py
+src/sample_aware_mlops/reporting/summary.py
+src/sample_aware_mlops/samples/__init__.py
+src/sample_aware_mlops/samples/manifest.py
+src/sample_aware_mlops/samples/registry.py
+src/sample_aware_mlops/validation/__init__.py
+src/sample_aware_mlops/validation/inputs.py
 tests/conftest.py
 tests/test_foundation.py
 tests/test_gates.py
@@ -243,8 +275,10 @@ tests/test_registry_lifecycle.py
 
 ## Local Git handoff
 
-Implementation and validation completed before Git initialization. Inspect the
-staged public file list, `git status`, and `git diff --cached --check` before the
-single local initial commit. The exact CI SVG Git-diff check is repeated after
-staging. The final response records the actual commit hash/status; this report
-cannot embed its own commit hash without changing that hash.
+The original history is preserved. Rename changes are reviewed with `git diff`,
+`git status`, and `git diff --cached --check` before a new commit titled
+`Rename framework to Sample-Aware MLOps`. The exact CI SVG Git-diff check and a
+Git checkout-index byte comparison are repeated after staging. The final response
+records the actual commit hash/status; a report cannot embed its own commit hash
+without changing that hash. No existing commit is amended, and no remote, push,
+tag or release is created.

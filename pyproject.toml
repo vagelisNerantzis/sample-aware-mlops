@@ -3,9 +3,9 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "sample-centric-ml"
+name = "sample-aware-mlops"
 version = "0.1.0"
-description = "Sample-centric orchestration, lineage, and lifecycle governance for scientific ML"
+description = "An MLOps framework for reproducible, leakage-safe scientific machine learning that preserves physical-sample identity across data lineage, validation, inference, promotion, and monitoring."
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
@@ -25,7 +25,7 @@ classifiers = [
 dev = ["pytest>=8,<10"]
 
 [project.urls]
-Repository = "https://github.com/vagelisNerantzis/sample-centric-ml"
+Repository = "https://github.com/vagelisNerantzis/sample-aware-mlops"
 
 [tool.setuptools.packages.find]
 where = ["src"]

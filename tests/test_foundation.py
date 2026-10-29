@@ -4,12 +4,12 @@ from dataclasses import replace
 
 import pytest
 
-from sample_centric_ml.experiments.identity import build_run_identity
-from sample_centric_ml.experiments.spec import ExperimentSpec
-from sample_centric_ml.provenance.hashes import canonical_json, freeze_json, sha256, thaw_json
-from sample_centric_ml.provenance.record import ProvenanceRecord, build_provenance
-from sample_centric_ml.samples.manifest import DatasetManifest
-from sample_centric_ml.samples.registry import ObservationRecord, SampleRecord, SampleRegistry
+from sample_aware_mlops.experiments.identity import build_run_identity
+from sample_aware_mlops.experiments.spec import ExperimentSpec
+from sample_aware_mlops.provenance.hashes import canonical_json, freeze_json, sha256, thaw_json
+from sample_aware_mlops.provenance.record import ProvenanceRecord, build_provenance
+from sample_aware_mlops.samples.manifest import DatasetManifest
+from sample_aware_mlops.samples.registry import ObservationRecord, SampleRecord, SampleRegistry
 
 
 def test_canonical_dictionary_order_does_not_change_hash():
