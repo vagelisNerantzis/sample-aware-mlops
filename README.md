@@ -7,7 +7,11 @@
 The physical sample is the fundamental unit of the ML lifecycle. Sample-Aware MLOps carries that identity through observation registration, experiment execution,
 evaluation, promotion, and monitoring. Version **0.1.0** provides an executable,
 standalone control plane with deterministic synthetic adapters.
-
+<p align="center">
+  <img src="assets/mapping.png"
+       alt="Sample-Aware Scientific ML Portfolio"
+       width="1000">
+</p>
 ## Why sample identity matters
 
 Rows, files, model versions, and prediction requests are useful MLOps
