@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1340" viewBox="0 0 1280 1340" role="img" aria-labelledby="title description">
+<title id="title">Sample-Centric ML: sample identity across the ML lifecycle</title>
+<desc id="description">Physical samples flow through a sample registry, dataset manifest, experiment specification, validation gates, representation, acquisition, inference, evaluation, run registry, promotion, simulation deployment, and monitoring. Monitoring motivates re-evaluation. Four companion repositories are associated with their conceptual execution stages.</desc>
+<defs>
+<marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L9 4.5 L0 9 Z" fill="#42546a"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;fill:#182b43}
+.title{font-size:29px;font-weight:700}.subtitle{font-size:16px;fill:#50647c}
+.node{fill:#f3f7fb;stroke:#9eafc2;stroke-width:1.5}
+.governance{fill:#e9f1ff;stroke:#6b91c8;stroke-width:1.5}
+.monitor{fill:#eaf6ef;stroke:#7da88b;stroke-width:1.5}
+.node-label{font-size:18px;font-weight:700;text-anchor:middle}
+.node-detail{font-size:13px;text-anchor:middle;fill:#50647c}
+.group{fill:#fbfcfe;stroke:#6b91c8;stroke-width:2}
+.group-label{font-size:15px;font-weight:700;letter-spacing:1px}
+.stage{fill:white;stroke:#aab7c7;stroke-width:1.2}
+.stage-label{font-size:16px;text-anchor:middle}
+.repo{font-size:13px;fill:#425b7a}.repo-caption{font-size:12px;fill:#687b91}
+.flow{fill:none;stroke:#42546a;stroke-width:2;marker-end:url(#arrow)}
+.association{stroke:#9baabe;stroke-width:1.4;stroke-dasharray:4 4}
+.loop{fill:none;stroke:#7b9385;stroke-width:2;marker-end:url(#arrow)}
+.loop-label{font-size:15px;font-weight:700;text-anchor:middle;fill:#456851}
+.footnote{font-size:13px;fill:#50647c}
+</style>
+</defs>
+<rect width="1280" height="1340" fill="#ffffff"/>
+<text x="55" y="49" class="title">Sample-Centric ML</text>
+<text x="55" y="80" class="subtitle">Physical sample identity survives every stage of the lifecycle.</text>
+<path d="M310 1217 H125 V504 H310" class="loop"/>
+<rect x="310" y="125" width="570" height="54" rx="10" class="node"/>
+<text x="595" y="158" class="node-label">PHYSICAL SAMPLES</text>
+<rect x="310" y="210" width="570" height="54" rx="10" class="node"/>
+<text x="595" y="243" class="node-label">SAMPLE REGISTRY</text>
+<rect x="310" y="295" width="570" height="54" rx="10" class="node"/>
+<text x="595" y="328" class="node-label">DATASET / MODALITY MANIFEST</text>
+<rect x="310" y="380" width="570" height="54" rx="10" class="node"/>
+<text x="595" y="413" class="node-label">EXPERIMENT SPECIFICATION</text>
+<rect x="310" y="465" width="570" height="78" rx="10" class="governance"/>
+<text x="595" y="493" class="node-label">VALIDATION GATES</text>
+<text x="595" y="516" class="node-detail">Leakage / provenance / reproducibility / quality</text>
+<path d="M595 179 V210" class="flow"/>
+<path d="M595 264 V295" class="flow"/>
+<path d="M595 349 V380" class="flow"/>
+<path d="M595 434 V465" class="flow"/>
+<path d="M595 543 V590" class="flow"/>
+<rect x="260" y="590" width="670" height="265" rx="12" class="group"/>
+<text x="285" y="618" class="group-label">ML EXECUTION / SAMPLE-LINKED ADAPTER OUTPUTS</text>
+<rect x="310" y="635" width="570" height="35" rx="6" class="stage"/>
+<text x="595" y="659" class="stage-label">Representation</text>
+<line x1="880" y1="652" x2="955" y2="652" class="association"/>
+<text x="968" y="652" class="repo">multimodal-representation-</text>
+<text x="968" y="668" class="repo">learning</text>
+<rect x="310" y="685" width="570" height="35" rx="6" class="stage"/>
+<text x="595" y="709" class="stage-label">Optional acquisition</text>
+<line x1="880" y1="702" x2="955" y2="702" class="association"/>
+<text x="968" y="702" class="repo">adaptive-modality-</text>
+<text x="968" y="718" class="repo">acquisition</text>
+<rect x="310" y="735" width="570" height="35" rx="6" class="stage"/>
+<text x="595" y="759" class="stage-label">Sample-level inference</text>
+<line x1="880" y1="752" x2="955" y2="752" class="association"/>
+<text x="968" y="752" class="repo">multimodal-inference-demo</text>
+<rect x="310" y="785" width="570" height="35" rx="6" class="stage"/>
+<text x="595" y="809" class="stage-label">Evaluation / calibration</text>
+<line x1="880" y1="802" x2="955" y2="802" class="association"/>
+<text x="968" y="802" class="repo">scientific-ml-benchmarking</text>
+<path d="M595 670 V685" class="flow"/>
+<path d="M595 720 V735" class="flow"/>
+<path d="M595 770 V785" class="flow"/>
+<text x="968" y="850" class="repo-caption">Conceptual companion roles</text>
+<rect x="310" y="900" width="570" height="54" rx="10" class="node"/>
+<text x="595" y="933" class="node-label">RUN REGISTRY</text>
+<rect x="310" y="985" width="570" height="80" rx="10" class="governance"/>
+<text x="595" y="1013" class="node-label">PROMOTION LIFECYCLE</text>
+<text x="595" y="1036" class="node-detail">Validated -&gt; candidate -&gt; explicit approval</text>
+<rect x="310" y="1100" width="570" height="54" rx="10" class="node"/>
+<text x="595" y="1133" class="node-label">DEPLOYMENT / SIMULATION</text>
+<rect x="310" y="1185" width="570" height="65" rx="10" class="monitor"/>
+<text x="595" y="1213" class="node-label">MONITORING</text>
+<text x="595" y="1236" class="node-detail">Modality availability / confidence / acquisition cost</text>
+<path d="M595 855 V900" class="flow"/>
+<path d="M595 954 V985" class="flow"/>
+<path d="M595 1065 V1100" class="flow"/>
+<path d="M595 1154 V1185" class="flow"/>
+<rect x="24" y="912" width="202" height="90" rx="8" fill="#ffffff"/>
+<text x="125" y="938" class="loop-label">RE-EVALUATION</text>
+<text x="125" y="963" class="node-detail">Review new evidence;</text>
+<text x="125" y="984" class="node-detail">repeat the gates</text>
+<text x="55" y="1300" class="footnote">Control plane: lineage, deterministic identity, gates, provenance, registry, promotion, monitoring.</text>
+<text x="55" y="1322" class="footnote">Synthetic adapters are standalone demonstrations; companion repositories are not runtime dependencies.</text>
+</svg>

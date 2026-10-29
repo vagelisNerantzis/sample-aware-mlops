@@ -1,0 +1,55 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    name: Python 3.12 / synthetic validation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+
+      - name: Install package and development dependencies
+        run: python -m pip install -e ".[dev]"
+
+      - name: Compile source, tests, examples, and diagram generator
+        run: python -m compileall src tests examples assets
+
+      - name: Run complete test suite
+        run: pytest -q
+
+      - name: Run synthetic MLOps lifecycle demo
+        run: python examples/run_sample_centric_mlops.py
+
+      - name: Regenerate architecture diagram
+        run: python assets/generate_architecture.py
+
+      - name: Verify deterministic architecture diagram
+        run: git diff --exit-code -- assets/architecture.svg
+
+      - name: Verify package and distribution versions
+        run: |
+          python - <<'PY'
+          from importlib.metadata import version
+          import sample_centric_ml
+
+          assert sample_centric_ml.__version__ == "0.1.0"
+          assert version("sample-centric-ml") == "0.1.0"
+          print("sample-centric-ml 0.1.0 imports successfully")
+          PY

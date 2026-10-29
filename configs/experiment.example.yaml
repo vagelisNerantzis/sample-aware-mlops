@@ -1,0 +1,37 @@
+# Illustrative configuration: runtime configuration uses ExperimentSpec.
+# No YAML parser is required or invoked by the package.
+experiment:
+  name: synthetic_sample_centric_v1
+  seed: 42
+
+data:
+  dataset_id: synthetic_scml
+  dataset_version: "1.0.0"
+  split_strategy: physical_sample
+
+representation:
+  embedding_dim: 8
+
+fusion:
+  method: mean
+
+acquisition:
+  enabled: true
+  policy: greedy
+  budget: 10.0
+
+evaluation:
+  split: validation
+  require_calibration: true
+
+promotion:
+  minimum_accuracy: 0.80
+  maximum_ece: 0.10
+
+monitoring:
+  maximum_confidence_drift: 0.10
+  maximum_missing_modality_rate: 0.20
+  maximum_cost_drift: 1.50
+
+reproducibility:
+  strict: true
